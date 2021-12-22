@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Landmark Software Solutions, Virginia, USA Office.</h1>
-<h1 align="center"> We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance. Work with us. I am persuaded to believe that wonderful things would happen in my life upon completion of this course. I will get a good job. </h1>
+<h1 align="center"> We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance. I am persuaded to believe that wonderful things would happen in my life upon completion of this course. I will get a good job. </h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
