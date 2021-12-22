@@ -15,16 +15,14 @@ node {
 	sh "${MHD}/bin/mvn deploy"
 	}
 	stage('5.Deploy2Stage'){
-	sshagent(['32d5fb4f-d92f-4a10-9f12-2738eab55fcc']) {
-   sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@172.31.15.31:/opt/tomcat9/webapps/app"
+	deploy adapters: [tomcat9(credentialsId: '565a0004-17df-4c9b-a686-89d2c01482a7', path: '', url: 'http://3.16.26.82:8080')], contextPath: null, war: 'target/*war'
 	}
 	stage('6.Appproval2Proceed'){
 	    timeout(time:5, unit:'DAYS'){
  			input message: 'Approval for production'
 	}
 	stage('7.Deploy2Prod'){
-	sshagent(['32d5fb4f-d92f-4a10-9f12-2738eab55fcc']) {
-   sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@172.31.15.31:/opt/tomcat9/webapps/app.war"
+	deploy adapters: [tomcat9(credentialsId: '565a0004-17df-4c9b-a686-89d2c01482a7', path: '', url: 'http://3.133.143.205:8080/')], contextPath: null, war: 'target/*war'
 	}
 	stage('8.EmailN'){
 	emailext body: '''Hello Scrum Team,
@@ -35,6 +33,3 @@ I thought to inform you of the progress we have made with deploying release 13 o
 	}
 	
 }
-		
-	}
-  
