@@ -28,7 +28,7 @@ node {
         sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@3.133.143.205:/opt/tomcat9/webapps/scripted-prod.war"
 	} 
 	stage('8.EmailN'){
-	emailext body: '''Hello Scrum Team,
+	emailext body: '''Hello Scrum Team!
 
 I am pleased to inform you of the progress on the new software.''', recipientProviders: [developers()], subject: 'CiCd Status', to: 'Scrum Team'
 	}
