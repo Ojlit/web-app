@@ -38,5 +38,5 @@ Find here Progress on the new software.''', recipientProviders: [developers()], 
 	}
 	
 }
-}
+
 }
