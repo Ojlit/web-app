@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">I, Osazee Jerry Onaghinor, was specially created by Jehovah to accomplish his purpose and great things.</h1>
+<h1 align="center">I, Osazee Jerry Onaghinor, was specially created by Jehovah to accomplish his purpose and many great things.</h1>
 <h1 align="center"> On October 02, 2021, I embacked on a career change. I strongly believe that wonderful things would happen in my life upon completion of this course. I will get a good job. </h1>
 <hr>
 <br>
