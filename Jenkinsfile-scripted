@@ -16,7 +16,7 @@ node {
 	//sh "${MHD}/bin/mvn deploy"
 	}
 	stage('5.Deploy2Stage'){
-	sshagent(['8dd8d4f0-bb41-4181-a601-2b98d31e7dbc']) {
+	sshagent(['9b169543-b6ee-4dbd-92c0-49e9017d65ab']) {
         sh "scp -o StrictHostKeyChecking=no target/*war ec2-User@3.16.26.82:/opt/tomcat9/webapps/scripted-uat.war"
 	}
 	stage('6.Appproval2Proceed'){
