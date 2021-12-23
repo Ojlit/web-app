@@ -30,7 +30,7 @@ node {
 	stage('8.EmailN'){
 	emailext body: '''Hello Scrum Team,
 
-I am pleased to inform you of the progress we have made with deploying release 13 of the new software.''', recipientProviders: [developers()], subject: 'CiCd Status', to: 'Scrum Team'
+I am pleased to inform you of the progress on release 13 of the new software.''', recipientProviders: [developers()], subject: 'CiCd Status', to: 'Scrum Team'
 	}
 	
 	}
