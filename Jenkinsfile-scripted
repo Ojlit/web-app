@@ -16,7 +16,7 @@ node {
 	//sh "${MHD}/bin/mvn deploy"
 	}
 	stage('5.Deploy2Stage'){
-	sshagent(['d13b9a06-c1d9-4fe5-81bc-5b685101ea56']) {
+	sshagent(credentials: ['d13b9a06-c1d9-4fe5-81bc-5b685101ea56'], ignoreMissing: true) {
         sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@3.133.143.205:/opt/tomcat9/webapps/scripted-uat.war"
 	}
 	stage('6.Appproval2Proceed'){
@@ -24,7 +24,7 @@ node {
  			input message: 'Approval for production'
 	}
 	stage('7.Deploy2Prod'){
-	sshagent(['d13b9a06-c1d9-4fe5-81bc-5b685101ea56']) {
+	sshagent(credentials: ['d13b9a06-c1d9-4fe5-81bc-5b685101ea56'], ignoreMissing: true) {
         sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@3.16.26.82:/opt/tomcat9/webapps/scripted-prod.war"
 	} 
 	stage('8.EmailN'){
