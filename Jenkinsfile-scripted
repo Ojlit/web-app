@@ -10,10 +10,10 @@ node {
 	sh "${MHD}/bin/mvn package"
 	}
 	stage('3.CodeQuality'){
-	sh "${MHD}/bin/mvn sonar:sonar"
+	//sh "${MHD}/bin/mvn sonar:sonar"
 	}
 	stage('4.Upload2Nexus'){
-	sh "${MHD}/bin/mvn deploy"
+	//sh "${MHD}/bin/mvn deploy"
 	}
 	stage('5.Deploy2Stage'){
 	sshagent(['4c5fe5ee-0c89-4231-81d8-574308f23159']) {
