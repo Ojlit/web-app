@@ -17,7 +17,7 @@ node {
 	}
 	stage('5.Deploy2Stage'){
 	sshagent(['d1e87b4d-255d-4dca-b099-af54ea3faa9d']) {
-        sh "scp -o StrictHostKeyChecking=no target/*war ec2-User@3.16.26.82:/opt/tomcat9/webapps/scripted-uat.war"
+        sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@3.16.26.82:/opt/tomcat9/webapps/scripted-uat.war"
 	}
 	stage('6.Appproval2Proceed'){
 	    timeout(time:5, unit:'DAYS'){
