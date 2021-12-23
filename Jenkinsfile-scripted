@@ -16,8 +16,8 @@ node {
 	//sh "${MHD}/bin/mvn deploy"
 	}
 	stage('5.Deploy2Stage'){
-	sshagent(['4c5fe5ee-0c89-4231-81d8-574308f23159']) {
-        sh "scp -o StrictHostKeyChecking=no target/*war Osazee@3.16.26.82:/opt/tomcat9/webapps/scripted-uat.war"
+	sshagent(['8dd8d4f0-bb41-4181-a601-2b98d31e7dbc']) {
+        sh "scp -o StrictHostKeyChecking=no target/*war ec2-User@3.16.26.82:/opt/tomcat9/webapps/scripted-uat.war"
 	}
 	stage('6.Appproval2Proceed'){
 	    timeout(time:5, unit:'DAYS'){
