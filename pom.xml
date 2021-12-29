@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url> http://3.134.244.179:8081/repository/TD-releases/</url>
+	      <url>http://18.222.134.70:8081/repository/declarative_releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.134.244.179:8081/repository/TD-snapshot/</url>
+	      <url>http://18.222.134.70:8081/repository/declarative_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
